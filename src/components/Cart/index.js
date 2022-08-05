@@ -5,7 +5,7 @@ import Header from "../Header";
 
 import "./index.css";
 
-const Products = () => {
+const Cart = () => {
   const accessToken = Cookies.get("jwt_token");
 
   if (accessToken === undefined) {
@@ -15,15 +15,15 @@ const Products = () => {
   return (
     <>
       <Header />
-      <div className="products-container">
+      <div className="cart-container">
         <img
-          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-img.png"
-          alt="products"
-          className="products-img"
+          src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-img.png"
+          alt="cart"
+          className="cart-img"
         />
       </div>
     </>
   );
 };
 
-export default Products;
+export default Cart;

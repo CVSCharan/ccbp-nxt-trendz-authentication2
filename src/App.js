@@ -10,11 +10,11 @@ import "./App.css";
 
 const App = () => (
   <Routes>
-    <Route exact path="/login" component={LoginForm} />
-    <Route exact path="/" component={Home} />
-    <Route exact path="/products" component={Products} />
-    <Route exact path="/cart" component={Cart} />
-    <Route component={NotFound} />
+    <Route exact path="/login" element={<LoginForm />} />
+    <Route exact path="/" element={<Home />} />
+    <Route exact path="/products" element={<Products />} />
+    <Route exact path="/cart" element={<Cart />} />
+    <Route element={<NotFound />} />
   </Routes>
 );
 
