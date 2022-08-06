@@ -1,4 +1,4 @@
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import Header from "../Header";
@@ -9,7 +9,7 @@ const Products = () => {
   const accessToken = Cookies.get("jwt_token");
 
   if (accessToken === undefined) {
-    return <Navigate to="/login" />;
+    return <Redirect to="/login" />;
   }
 
   return (

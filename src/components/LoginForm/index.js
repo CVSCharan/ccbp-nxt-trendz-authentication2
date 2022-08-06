@@ -1,5 +1,5 @@
 import { Component } from "react";
-import { Navigate } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import Cookies from "js-cookie";
 
 import "./index.css";
@@ -97,7 +97,7 @@ class LoginForm extends Component {
     const jwtToken = Cookies.get("jwt_token");
 
     if (jwtToken !== undefined) {
-      return <Navigate to="/" />;
+      return <Redirect to="/" />;
     }
 
     return (
